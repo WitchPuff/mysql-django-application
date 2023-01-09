@@ -83,20 +83,20 @@ python manage.py runserver
 
 <img src="https://raw.githubusercontent.com/WitchPuff/typora_images/main/img/202301091416283.png" alt="image-20230109141624915" style="zoom: 67%;" />
 
-<center><font size='4'>Home Section
+
 
 <img src="https://raw.githubusercontent.com/WitchPuff/typora_images/main/img/202301091418035.png" alt="image-20230109141821701" style="zoom:67%;" />
 
-<center><font size='4'>Services & Reviews Section
+
 
 
 ![image-20230109143125058](https://raw.githubusercontent.com/WitchPuff/typora_images/main/img/202301091431264.png)
 
-<center><font size='4'>Admin
+
 
 ![image-20230109141434063](https://raw.githubusercontent.com/WitchPuff/typora_images/main/img/202301091414254.png)
 
-<center><font size='4'>Customer Search
+
 
 
 
