@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 白色主题 */
+:root {
+    --color-menu-bg: #fff;
+    --font-color-mi: #000;
+    --font-color-mi-hover: #1890ff;
+    --color-bg-mi-hover: #ececec;
+    --border-radius-mi: 2px;
+    --transition-menu-time: 0.2s;
+    --color-line-bg: #d3d3d3;
+}
+
+/*黑色主题，使用时把上面的白色主题注释掉，启用下面的css代码*/
+/* :root {
+    --color-bg: #e7e7e7;
+    --color-menu-bg: #232324;
+    --font-color-mi: #c9cdd4;
+    --font-color-mi-hover: #a649d1;
+    --color-bg-mi-hover: #303030;
+    --border-radius-mi: 2px;
+    --transition-menu-time: 0.2s;
+    --color-line-bg: #333333;
+} */
+
+.staffli {
+    background-color: #e7e7e7;
+    min-height: 100vh;
+    position: absolute;
+}
+.content {
+    position: fixed;
+}
+
+
+.menu-box {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+    min-height: 100vh;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    background-color: var(--color-menu-bg);
+}
+
+.menu-box input[type='checkbox'] {
+    display: none;
+}
+
+.menu-box>label {
+    position: absolute;
+    top: 48%;
+    right: 0;
+    transform: translateX(50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 0px #000;
+    background-color: var(--color-menu-bg);
+    color: var(--font-color-mi);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.menu-box>label>i {
+    font-weight: 900;
+    text-indent: -3px;
+    font-size: 20px;
+    transition: transform var(--transition-menu-time);
+    transform: rotate(0deg);
+}
+
+.menu-box>label:hover {
+    box-shadow: 0px 0px 2px 0px #000;
+    color: var(--font-color-mi-hover);
+}
+
+.menu-box>input#menu-btn:checked+label>i {
+    transform: rotate(180deg);
+}
+
+.menu {
+    font-size: 18px;
+    width: 220px;
+    min-height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width var(--transition-menu-time);
+    color: var(--font-color-mi);
+}
+
+.menu-box>input#menu-btn:checked~.menu {
+    width: 0;
+}
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu-item>label{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: var(--border-radius-mi);
+    display: flex;
+    align-items: center;
+}
+
+.menu-item>label:hover {
+    color: var(--font-color-mi-hover);
+}
+
+.menu-item>label>i:first-child {
+    flex: none;
+    margin-right: 6px;
+    font-size: 24px;
+}
+
+.menu-item>label>span {
+    flex: 1;
+}
+
+.menu-item>label>i:last-child {
+    flex: none;
+    font-size: 20px;
+    font-weight: 900;
+    transform: rotate(0deg);
+    transition: transform var(--transition-menu-time);
+}
+
+.menu-item>input:checked+label>i:last-child {
+    transform: rotate(180deg);
+}
+
+.menu-content {
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition-menu-time);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-menu-bg);
+}
+
+/* 选项，若 n 项，就 n * 40px */
+.menu-item>input#menu-item1:checked~.menu-content {
+    height: calc(3 * 40px);
+}
+
+.menu-item>input#menu-item2:checked~.menu-content {
+    height: calc(2 * 40px);
+}
+
+.menu-item>input#menu-item3:checked~.menu-content {
+    height: calc(3 * 40px);
+}
+
+.menu-content>span {
+    width: 100%;
+    text-indent: 20px;
+    line-height: 40px;
+    border-radius: var(--border-radius-mi);
+}
+
+.menu-content>span:hover {
+    background-color: var(--color-bg-mi-hover);
+    color: var(--font-color-mi-hover);
+}
+
+.set-line {
+    margin: 20px 0 10px 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-line-bg);
+}
+.msg {
+    position: relative;
+    top: 100px;
+}

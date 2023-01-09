@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Motors</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="icon" href="{% static 'img/jeep.png' %}">
+  <script src="https://kit.fontawesome.com/d052c45ff6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><img src="{% static 'img/jeep.png' %}" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="nav_bar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="dealerLogin/">Dealers</a></li>
+            <li><a href="search/">Search</a></li>
+            <li><a href="market/">Marketing</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="custReg/" class="sign-up">Survey</a>
+            <a href="adminLogin/" class="sign-in">Admin</a>
+        </div>
+    </header>
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="text">
+            <h1> <i class="fa-solid fa-fire"></i> <span>General Motors</span></h1><br>
+            <h1>Go <span>Faster</span> Than <br>Your Fastest pace</h1><br><br>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Best Services</span>
+            <h1>Explore Top Deals <br> From Top Rated Dealers</h1>
+        </div>
+        <div class="services-container">
+            {% for i in ret %}
+            <div class="box">
+                <div class="box-img">
+                    <img src={{i.img}} alt="">
+                </div>
+                <p>2015</p>
+                <h3>{{i.car}}</h3>
+                <h2>${{i.price}}</h2>
+                <a href="custReg/" class="btn">Buy Now</a>
+            </div>
+            {% endfor %}
+    </section>
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="heading">
+            <span>Reviews</span>
+            <h1>What Our Customers Say</h1>
+        </div>
+        <div class="reviews-container">
+            <div class="box">
+                <div class="rev-img">
+                    <img src="{% static 'img/rev1.png' %}" alt="">
+                </div>
+                <h2>Harrier Du Bois</h2>
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                </div>
+                <p>This website sucks! Can't afford any vehicle showed here! Miss my Coupris Kineema 40... </p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="{% static 'img/rev2.png' %}" alt="">
+                </div>
+                <h2>Ruby</h2>
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>Too innocent to try to find a truck here for leaving</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="{% static 'img/rev3.png' %}" alt="">
+                </div>
+                <h2>Noid</h2>
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>Not hardcore enough.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Nwsletter -->
+    <section class="newsletter">
+        <h2>Subscribe To Newsletter</h2>
+        <div class="box">
+            <input type="text" placeholder="Enter  Your Email...">
+            <a href="#" class="btn">Subscribe</a>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>&#169; CarpoolVenom All Right Reserved</p>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+        </div>
+    </div>
+
+<!-- ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Link To JS -->
+    <script src="{% static '/main.js' %}"></script>
+</body>
+</html>

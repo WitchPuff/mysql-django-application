@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Montserrat';
+    src:url('../css/font/Montserrat-Black.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src:url('../css/font/Ubuntu-Bold.ttf')
+}
+@font-face {
+    font-family: 'Montserrat-light';
+    src:url('../css/font/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: 'Montserrat-bold';
+    src:url('../css/font/Montserrat-Bold.ttf');
+}
+h2 {
+    font-family: Montserrat-bold;
+    font-size: 3.5rem
+}
+.dogwords {
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+h3 {
+    font-family: Montserrat-bold;
+
+}
+p {
+    color:grey
+}
+body {
+    font-family: Montserrat;
+}
+#title {
+    background-color: #323648;
+    color:white;
+    
+}
+#contain {
+    padding: 3% 15%;
+}
+.headline {
+    font-family:Montserrat;
+    font-size: 3.5rem;
+    line-height: 1.5 ;
+}
+#nar {
+    padding-bottom: 4.5rem;
+}
+#brand {
+    font-family: Ubuntu;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.nav-item {
+    padding: 0 18px;
+}
+.nav-link {
+    font-size: 1.2rem;
+    font-family: Montserrat-light;
+
+}
+.download-button {
+    margin:5% 3% 5% 0%;
+}
+.title-img {
+    width: 60%;
+    transform: rotate(25deg);
+}
+#features {
+    padding: 7% 15%;
+}
+.feature-box {
+    text-align: center;
+    padding: 5%;
+}
+.icon {
+    color:#ef8172;
+    margin-bottom: 1rem;
+}
+.icon:hover {
+    color:#ff4c68;
+}
+#testimonials {
+    text-align: center;
+    background-color:#ef8172;
+    color: white;
+}
+.carousel-item {
+    padding: 7% 15%;
+}
+.test-img {
+    border-radius: 50%;
+    margin:20px;
+    width: 10%;
+}
+#press {
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+
+}
+.pres-img {
+    width: 15%;
+    margin: 20px 20px 50px;
+}

@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'img/jeep.png' %}">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Motors</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.4.1-dist/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/d052c45ff6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><img src="{% static 'img/jeep.png' %}" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="nav_bar">
+            <li><a href="http://127.0.0.1:8000/#home">Home</a></li>
+            <li><a href="http://127.0.0.1:8000/#services">Services</a></li>
+            <li><a href="http://127.0.0.1:8000/#reviews">Reviews</a></li>
+            <li><a href="http://127.0.0.1:8000/dealerLogin/">Dealers</a></li>
+            <li><a href="http://127.0.0.1:8000/search/">Search</a></li>
+            <li><a href="http://127.0.0.1:8000/market/">Marketing</a></li>
+
+        </ul>
+        <div class="header-btn">
+            <a herf="" class="sign-up">Welcome, dealer</a>
+            <a href="http://127.0.0.1:8000/dealerReg" class="sign-up">Sign Up</a>
+            <a href="http://127.0.0.1:8000" class="sign-in">Esc</a>
+        </div>
+    </header>
+    
+<section class="login" id="login">
+<div class="account">
+    <style>
+        .account {
+            width: 400px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px #aaa;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            padding: 20px 40px;
+        }
+
+        .account h2 {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+    <h2>Dealer Login</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">ID</label>
+            <input type="text" name="id" class="form-control" id="exampleInputEmail1" placeholder="username">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="pwd" class="form-control" id="exampleInputPassword1" placeholder="password">
+        </div>
+        <div>
+            <button style="margin-left:125px;" type="submit" onclick="myfunc()" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+    <div style="color: red;">{{ msg }}</div>
+</div>
+</section>
+
+
+
+
+</body>
+</html>
+    

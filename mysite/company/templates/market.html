@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'img/jeep.png' %}">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Motors</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.4.1-dist/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/d052c45ff6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><img src="{% static 'img/jeep.png' %}" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="nav_bar">
+            <li><a href="http://127.0.0.1:8000/#home">Home</a></li>
+            <li><a href="http://127.0.0.1:8000/#services">Services</a></li>
+            <li><a href="http://127.0.0.1:8000/#reviews">Reviews</a></li>
+            <li><a href="http://127.0.0.1:8000/dealerLogin/">Dealers</a></li>
+            <li><a href="http://127.0.0.1:8000/search/">Search</a></li>
+            <li><a href="http://127.0.0.1:8000/market/">Marketing</a></li>
+
+        </ul>
+        <div class="header-btn">
+            <a class="sign-up">Welcome, Staff</a>
+            <a href="http://127.0.0.1:8000" class="sign-in">Esc</a>
+        </div>
+    </header>
+    
+<section class="login" id="login">
+<div class="account">
+    <style>
+        .account {
+            width: 800px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px #aaa;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            padding: 20px 40px;
+        }
+
+        .account h2 {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+    <h2>OLAP Query for Marketing Department</h2><br>
+    <br>
+    <h4>Tables: 
+        {% for i in tables %}
+            {{i}},
+        {% endfor %}
+    </h4>
+    <br><br><br>
+    <form method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">select</label>
+            <input type="text" name="select" class="form-control" id="exampleInputEmail1" placeholder="Use MySQL 8.0 grammar">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">from</label>
+            <input type="text" name="from" class="form-control" id="exampleInputEmail1" placeholder="Use MySQL 8.0 grammar">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">where</label>
+            <input type="text" name="where" class="form-control" id="exampleInputEmail1" placeholder="Use MySQL 8.0 grammar">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">group by</label>
+            <input type="text" name="group" class="form-control" id="exampleInputEmail1" placeholder="Use MySQL 8.0 grammar">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">order by</label>
+            <input type="text" name="order" class="form-control" id="exampleInputEmail1" placeholder="Use MySQL 8.0 grammar">
+                <div class="header-btn">
+            <center><button style="height:30px; width:80px;border: none;" type="submit" onclick="myfunc()" class="sign-in">Submit</button></center>
+        </div>
+
+    </form>
+    <div style="color: red;">{{ msg }}</div>
+</div>
+</section>
+
+<br><br><br>
+    <h2><center>Query Result of <br><br>[{{query}}]</center></h2>
+    <br><br><br>
+    <div class="plan_box">
+        <style>
+    .plan_box {
+        overflow: hidden;
+      }
+      .plan_box table {
+        border-spacing: 0;
+      }
+      .plan_box table thead tr:nth-child(2n+1) {
+        background-color: #b9b9e0;
+      }
+      .plan_box table tr {
+        height: 40px;
+        font-size: 14px;
+        color: #666666;
+        line-height: 14px;
+        font-weight: 400;
+      }
+      .plan_box table tr:nth-child(2n) {
+        background-color: #eaeaf3;
+      }
+      .plan_box table .head {
+        font-size: 14px;
+        color: #666666;
+        line-height: 14px;
+        font-weight: 600;
+      }
+    </style>
+    {#border-collapse属性显示细线表格#}
+
+ <center><table  cellspacing="0"  width=80% height=30% align=center>
+    <thead>
+        {% for i in keys %}
+        <td><b><center>{{i}}</center></td>
+        {% endfor %}
+    </thead>
+    {#展示数据#}
+    {% for t in data %}
+        <tr>
+            {#展示数据#}
+            {% for i in t %}
+            <td><center>{{i}}</center></td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table></center></div>
+<br><br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>
+    

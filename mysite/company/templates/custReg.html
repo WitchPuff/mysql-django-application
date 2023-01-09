@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'img/jeep.png' %}">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Motors</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.4.1-dist/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/d052c45ff6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><img src="{% static 'img/jeep.png' %}" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="nav_bar">
+            <li><a href="http://127.0.0.1:8000/#home">Home</a></li>
+            <li><a href="http://127.0.0.1:8000/#services">Services</a></li>
+            <li><a href="http://127.0.0.1:8000/#reviews">Reviews</a></li>
+            <li><a href="http://127.0.0.1:8000/dealerLogin/">Dealers</a></li>
+            <li><a href="http://127.0.0.1:8000/search/">Search</a></li>
+            <li><a href="http://127.0.0.1:8000/market/">Marketing</a></li>
+
+        </ul>
+        <div class="header-btn">
+            <a class="sign-up">Welcome, Customer</a>
+            <a href="http://127.0.0.1:8000" class="sign-in">Esc</a>
+        </div>
+    </header>
+    
+<section class="login" id="login">
+<div class="account">
+    <style>
+        .account {
+            width: 800px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px #aaa;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            padding: 20px 40px;
+        }
+
+        .account h2 {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+    <h2>Customer Survey</h2><br>
+    <h4>Before your purchasing please allow us to know some information about you. Your information would be saved and protected. Thanks for your cooperation!</h4>
+    <br><br><br>
+    <form method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="username">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">City</label>
+            <input type="text" name="address" class="form-control" id="exampleInputEmail1" placeholder="address">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone</label>
+            <input type="text" name="phone" class="form-control" id="exampleInputEmail1" placeholder="phone">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Gender</label>
+            <input type="text" name="gender" class="form-control" id="exampleInputEmail1" placeholder="gender">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Annual Income($)</label>
+            <input type="text" name="income" class="form-control" id="exampleInputEmail1" placeholder="income">
+        </div>
+                <div class="header-btn">
+            <center><button style="height:30px; width:80px;border: none;" type="submit" onclick="myfunc()" class="sign-in">Submit</button></center>
+        </div>
+
+    </form>
+    <div style="color: red;">{{ msg }}</div>
+</div>
+</section>
+
+
+
+
+</body>
+</html>
+    
