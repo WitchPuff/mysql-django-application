@@ -1,7 +1,7 @@
 # 🚗 Car Company Website
 
 <p>
-English | <a href="README-CN.md">中文</a>
+English | <a href="readme-cn.md">中文</a>
 </p>
 
 This is a backend database project for a car company, which enables a front-end web application to interact with the local database, perform queries, modifications, and display the results.
