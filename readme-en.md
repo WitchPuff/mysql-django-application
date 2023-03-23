@@ -1,19 +1,19 @@
-#🚗 Car Company Website 
-
-<p align="center">
-    <br> English | <a href="README-CN.md">中文</a>
-</p>
+# 🚗 Car Company Website
 
 This is a backend database project for a car company, which enables a front-end web application to interact with the local database, perform queries, modifications, and display the results.
 
-##🌐 Environment
+<p>
+    <br> English | <a href="README-CN.md">中文</a>
+</p>
+
+## 🌐 Environment
 
 - Python
 - Django
 - MySQL 8.0.31
 - WSL2
 
-##🛠️ Function Modules
+## 🛠️ Function Modules
 
 The basic website includes the following function modules:
 
@@ -24,7 +24,7 @@ The basic website includes the following function modules:
 - Customer Survey: Record customer information in the database after they fill out the information form.
 - Services: Display the top sales of brand models and their prices for the current year.
 
-##👨‍💻 Usage
+## 👨‍💻 Usage
 
 To run this project, you need to:
 
@@ -96,7 +96,7 @@ To run this project, you need to:
 
 Visit here: [http://127.0.0.1:8000](http://127.0.0.1:8000/)
 
-##⭐It may looks like:
+## ⭐It may look like
 
 <img src="https://raw.githubusercontent.com/WitchPuff/typora_images/main/img/202303231912195.png" alt="image-20230109141624915" style="zoom: 67%;" />
 
@@ -115,10 +115,10 @@ Visit here: [http://127.0.0.1:8000](http://127.0.0.1:8000/)
 
 
 
-##💡Reference
+## 💡Reference
 
 [Source code of the front end design](https://www.youtube.com/watch?v=dbTe7pmqLv4)
 
-##🤝 Contribution
+## 🤝 Contribution
 
 This project is still under development and may have some bugs or incomplete features. Any contributions or suggestions are welcome.
